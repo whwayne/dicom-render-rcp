@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="dicom3drender.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="dicom3drender.Perspective"
+            id="Dicom3DRender.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="view.XDicomView"
+            id="view.XDicomView"
+            name="XDicomView">
+      </view>
+      <view
+            class="view.YDicomView"
+            id="view.YDicomView"
+            name="YDicomView">
+      </view>
+      <view
+            class="view.ZDicomView"
+            id="view.ZDicomView"
+            name="ZDicomView">
+      </view>
+      <view
+            class="view.ThreeView"
+            id="view.ThreeView"
+            name="3DDicomView">
+      </view>
+      <view
+            class="view.ImageView"
+            id="view.ImageView"
+            name="New ViewPart">
+      </view>
+   </extension>
+
+</plugin>
